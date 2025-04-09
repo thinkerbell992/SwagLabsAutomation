@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!-- The set of sanity tests to execute on the system -->
+
+<suite name="Regression Suite" parallel="methods" thread-count="4">
+    <test name="Regression Tests">
+
+    <groups>
+        <run>
+            <include name="regression"/>
+            <exclude name="deprecated"/>
+        </run>
+    </groups>
+        <packages>
+            <package name="test.*"/>
+        </packages>
+    </test>
+    </suite>
+
+
+
